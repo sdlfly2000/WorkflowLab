@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowLab", "WorkflowLab\WorkflowLab.csproj", "{A078A00F-051B-4130-AA2F-12BAABFB1F24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{88AE846F-058D-427B-89E9-C515FA3E619F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workflow.Core", "Workflow.Core\Workflow.Core.csproj", "{6D6AA40C-3EE5-4176-85C4-84E83B35B2FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A078A00F-051B-4130-AA2F-12BAABFB1F24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A078A00F-051B-4130-AA2F-12BAABFB1F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A078A00F-051B-4130-AA2F-12BAABFB1F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A078A00F-051B-4130-AA2F-12BAABFB1F24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D6AA40C-3EE5-4176-85C4-84E83B35B2FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D6AA40C-3EE5-4176-85C4-84E83B35B2FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D6AA40C-3EE5-4176-85C4-84E83B35B2FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D6AA40C-3EE5-4176-85C4-84E83B35B2FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6D6AA40C-3EE5-4176-85C4-84E83B35B2FB} = {88AE846F-058D-427B-89E9-C515FA3E619F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C8C02C1-5E98-42A6-B580-CB347524995C}
+	EndGlobalSection
+EndGlobal
