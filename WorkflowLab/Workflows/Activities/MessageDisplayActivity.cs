@@ -21,12 +21,18 @@ namespace WorkflowLab.Workflows.Activities
             _activity = new SequencialActivity<MessageContext>(
                 displayReferenceActivity,
                 new CheckMessageActivity(CheckMessage, updateMessageActivity),
+                new CheckPermissionActivity(CheckPermission, updateMessageActivity, displayMessageActivity),
                 displayMessageActivity);
         }
 
         private bool CheckMessage(MessageContext context)
         {
-            return true;
+            return false;
+        }
+
+        private bool CheckPermission(MessageContext context)
+        {
+            return false;
         }
 
         public override void Execute(MessageContext context)
