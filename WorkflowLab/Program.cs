@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using WorkflowLab.Workflows;
-using WorkflowLab.Workflows.Activities;
+using System.Collections.Generic;
+using Common.Core.DependencyInjection;
 
 namespace WorkflowLab
 {
@@ -19,10 +19,10 @@ namespace WorkflowLab
                     {
                         service.AddHostedService<Start>();
 
-                        service.AddTransient<IMessageDisplayActivity, MessageDisplayActivity>();
-                        service.AddTransient<IDisplayReferenceActivity, DisplayReferenceActivity>();
-                        service.AddTransient<IDisplayMessageActivity, DisplayMessageActivity>();
-                        service.AddTransient<IMessageDisplayWorkflow, MessageDisplayWorkflow>();
+                        DIModule.RegisterDomain(service, new List<string> 
+                        {
+                            "WorkflowLab"
+                        });
                     }).Build();
         }
     }

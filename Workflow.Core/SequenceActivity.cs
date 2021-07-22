@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Workflow.Core
 {
-    public abstract class SequenceActivity<TContext> : ISequenceActivity<TContext> where TContext : class
+    public class SequenceActivity<TContext> : ISequenceActivity<TContext> where TContext : class
     {
         private IEnumerable<IActivity<TContext>> _activities;
 
@@ -12,7 +12,7 @@ namespace Workflow.Core
             _activities = activities.AsEnumerable();
         }
 
-        public void Execute(TContext context)
+        public virtual void Execute(TContext context)
         {
             foreach (var activity in _activities)
             {
