@@ -5,7 +5,7 @@ using Common.Core.DependencyInjection;
 namespace WorkflowLab.Workflows.Activities
 {
     [ServiceLocate(typeof(IMessageDisplayActivity))]
-    public class MessageDisplayActivity : SequenceActivity<MessageContext>, IMessageDisplayActivity
+    public class MessageDisplayActivity : SequencialActivity<MessageContext>, IMessageDisplayActivity
     {
         private IActivity<MessageContext> _activity;
 
@@ -18,7 +18,7 @@ namespace WorkflowLab.Workflows.Activities
             updateMessageActivity, 
             displayMessageActivity)
         {
-            _activity = new SequenceActivity<MessageContext>(
+            _activity = new SequencialActivity<MessageContext>(
                 displayReferenceActivity,
                 new CheckMessageActivity(CheckMessage, updateMessageActivity),
                 displayMessageActivity);

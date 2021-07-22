@@ -3,7 +3,7 @@ using WorkflowLab.Contexts;
 
 namespace WorkflowLab.Workflows.Activities
 {
-    public interface IMessageDisplayActivity : ISequenceActivity<MessageContext>
+    public interface IMessageDisplayActivity : ISequencialActivity<MessageContext>
     {
     }
 }

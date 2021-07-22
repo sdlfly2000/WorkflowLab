@@ -1,6 +1,6 @@
 ﻿namespace Workflow.Core
 {
-    public interface ISequenceActivity<TContext> : IActivity<TContext>
+    public interface ISequencialActivity<TContext> : IActivity<TContext>
         where TContext : class
     {
     }
